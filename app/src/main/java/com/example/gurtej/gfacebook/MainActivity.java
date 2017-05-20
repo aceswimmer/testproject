@@ -2,6 +2,7 @@ package com.example.gurtej.gfacebook;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -12,10 +13,13 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<fbuser> facebooklist;
         ListView facebooklistview;
     TextView tvlatest;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.d("TAG", "onCreate: bebwbbwbebwbe");
+        tvlatest.setText("0");
         facebooklist=new ArrayList<>();
         facebooklist.add(new fbuser("05/01/17,01:00 am","My name is A","This is the status update for A. He just keeps on writing and never ever stops. He feels happy to keep on writing till he forcefully crosses 140 characters.",R.drawable.a));
         facebooklist.add(new fbuser("05/01/17,02:00 am","My name is B","This is the short status update for B",R.drawable.b));
